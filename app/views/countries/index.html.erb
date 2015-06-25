@@ -1,0 +1,24 @@
+<p>
+	Fetched list Database which was orignaly inserted by cousuming Data from SOAP Api
+</p>
+<%= link_to "View Countries Directly from API", countries_from_api_countries_path %>
+<div class="">
+	<table class="table table-bordered" cellspacing="0" width="95%">
+		<thead>
+			<tr>
+				<th>Name</th>
+				<th>Actions</th>
+			</tr>
+		</thead>
+		<tbody>
+			<% @countries.each do |country| %>
+			<tr>
+				<td> <%= country.name %></td>
+				<td> <%= link_to  "View Details", country_path(country) %></td>
+			</tr>
+			<% end %>
+
+		</tbody>
+	</table>
+	<br />
+</div>
